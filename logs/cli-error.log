@@ -1,0 +1,144 @@
+2018-05-22 06:27:58 Error: [InvalidArgumentException] There was a problem creating the schema table: SQLSTATE[42000]: Syntax error or access violation: 1142 CREATE command denied to user 'currency_php'@'localhost' for table 'phinxlog' in C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 544
+Stack Trace:
+#0 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(210): Phinx\Db\Adapter\PdoAdapter->createSchemaTable()
+#1 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(121): Phinx\Db\Adapter\PdoAdapter->setConnection(Object(PDO))
+#2 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(238): Phinx\Db\Adapter\MysqlAdapter->connect()
+#3 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\CakeAdapter.php(57): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#4 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\MysqlAdapter), Object(Cake\Database\Connection))
+#5 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Command\MarkMigrated.php(106): Migrations\Command\MarkMigrated->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Command\Command.php(251): Migrations\Command\MarkMigrated->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(946): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\MarkMigrated), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'mark_migrated')
+#12 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#13 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Migrations\Shell\MigrationsShell->runCommand(Array, true, Array)
+#14 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(419): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SnapshotTrait.php(74): Cake\Console\Shell->dispatchShell('migrations mark...')
+#17 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SnapshotTrait.php(42): Migrations\Shell\Task\MigrationSnapshotTask->markSnapshotApplied('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(108): Migrations\Shell\Task\MigrationSnapshotTask->createFile('C:\\xampp\\htdocs...', '<?php\nuse Migra...')
+#19 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SimpleMigrationTask.php(95): Bake\Shell\Task\SimpleBakeTask->bake('Initial')
+#20 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(48): Migrations\Shell\Task\SimpleMigrationTask->bake('Initial')
+#21 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#22 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#23 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#24 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#25 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#26 C:\xampp\htdocs\cake-auth\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#27 {main}
+
+
+2018-05-28 05:58:58 Error: [RuntimeException] Unknown command `cake migration_snapshot`. Run `cake --help` to get the list of valid commands. in C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'migration_snaps...')
+#1 C:\xampp\htdocs\cake-auth\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2018-05-28 06:00:24 Error: [InvalidArgumentException] There was a problem creating the schema table: SQLSTATE[42000]: Syntax error or access violation: 1142 CREATE command denied to user 'currency_php'@'localhost' for table 'phinxlog' in C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 544
+Stack Trace:
+#0 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(210): Phinx\Db\Adapter\PdoAdapter->createSchemaTable()
+#1 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(121): Phinx\Db\Adapter\PdoAdapter->setConnection(Object(PDO))
+#2 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(238): Phinx\Db\Adapter\MysqlAdapter->connect()
+#3 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\CakeAdapter.php(57): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#4 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\MysqlAdapter), Object(Cake\Database\Connection))
+#5 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Command\MarkMigrated.php(106): Migrations\Command\MarkMigrated->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Command\Command.php(251): Migrations\Command\MarkMigrated->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(946): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\MarkMigrated), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'mark_migrated')
+#12 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#13 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Migrations\Shell\MigrationsShell->runCommand(Array, true, Array)
+#14 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(419): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SnapshotTrait.php(74): Cake\Console\Shell->dispatchShell('migrations mark...')
+#17 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SnapshotTrait.php(42): Migrations\Shell\Task\MigrationSnapshotTask->markSnapshotApplied('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(108): Migrations\Shell\Task\MigrationSnapshotTask->createFile('C:\\xampp\\htdocs...', '<?php\nuse Migra...')
+#19 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SimpleMigrationTask.php(95): Bake\Shell\Task\SimpleBakeTask->bake('Initial1')
+#20 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(48): Migrations\Shell\Task\SimpleMigrationTask->bake('Initial1')
+#21 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial1')
+#22 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial1')
+#23 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#24 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#25 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#26 C:\xampp\htdocs\cake-auth\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#27 {main}
+
+
+2018-05-28 06:02:28 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'currency.user_currency_tracking]' doesn't exist in C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 131
+Stack Trace:
+#0 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'user_currency_t...', Array, Object(Cake\Database\Schema\TableSchema))
+#1 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('user_currency_t...', Array)
+#2 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('user_currency_t...')
+#3 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\ORM\Table.php(673): Cake\ORM\Table->getSchema()
+#4 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(220): Cake\ORM\Table->getPrimaryKey()
+#5 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'user_currency_t...', 'UserCurrencyTra...')
+#7 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('UserCurrencyTra...')
+#8 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\BakeShell.php(272): Bake\Shell\Task\ModelTask->main('UserCurrencyTra...')
+#9 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('UserCurrencyTra...', 0)
+#10 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\BakeShell.php(273): Cake\Collection\Collection->each(Object(Closure))
+#11 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('user_currency_t...')
+#12 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\xampp\htdocs\cake-auth\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-06-05 02:33:39 Error: [PDOException] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+ in C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Driver.php on line 92
+Stack Trace:
+#0 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Driver.php(92): PDO->__construct('mysql:host=loca...', 'currency_php', 'MoneyMatters01', Array)
+#1 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(109): Cake\Database\Connection->getSchemaCollection()
+#8 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection(Object(Cake\Database\Connection))
+#9 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#10 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#11 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\xampp\htdocs\cake-auth\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-06-05 02:34:02 Error: [InvalidArgumentException] There was a problem creating the schema table: SQLSTATE[42000]: Syntax error or access violation: 1142 CREATE command denied to user 'currency_php'@'localhost' for table 'phinxlog' in C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php on line 544
+Stack Trace:
+#0 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(210): Phinx\Db\Adapter\PdoAdapter->createSchemaTable()
+#1 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\MysqlAdapter.php(121): Phinx\Db\Adapter\PdoAdapter->setConnection(Object(PDO))
+#2 C:\xampp\htdocs\cake-auth\vendor\robmorgan\phinx\src\Phinx\Db\Adapter\PdoAdapter.php(238): Phinx\Db\Adapter\MysqlAdapter->connect()
+#3 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\CakeAdapter.php(57): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#4 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Command\CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\MysqlAdapter), Object(Cake\Database\Connection))
+#5 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Command\MarkMigrated.php(106): Migrations\Command\MarkMigrated->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Command\Command.php(251): Migrations\Command\MarkMigrated->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(946): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(248): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\MarkMigrated), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\xampp\htdocs\cake-auth\vendor\symfony\console\Application.php(148): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(532): Migrations\Shell\MigrationsShell->main('migrations', 'mark_migrated')
+#12 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\MigrationsShell.php(164): Cake\Console\Shell->runCommand(Array, true, Array)
+#13 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(230): Migrations\Shell\MigrationsShell->runCommand(Array, true, Array)
+#14 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(419): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SnapshotTrait.php(74): Cake\Console\Shell->dispatchShell('migrations mark...')
+#17 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SnapshotTrait.php(42): Migrations\Shell\Task\MigrationSnapshotTask->markSnapshotApplied('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(108): Migrations\Shell\Task\MigrationSnapshotTask->createFile('C:\\xampp\\htdocs...', '<?php\nuse Migra...')
+#19 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\SimpleMigrationTask.php(95): Bake\Shell\Task\SimpleBakeTask->bake('Initial2')
+#20 C:\xampp\htdocs\cake-auth\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(48): Migrations\Shell\Task\SimpleMigrationTask->bake('Initial2')
+#21 C:\xampp\htdocs\cake-auth\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial2')
+#22 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial2')
+#23 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#24 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#25 C:\xampp\htdocs\cake-auth\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#26 C:\xampp\htdocs\cake-auth\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#27 {main}
+
+
